@@ -9,7 +9,7 @@ picfiles = r'C:/Users/LENOVO/Desktop/jt'
 #modname函数返回最后一个非空值，modpathname函数返回xx-xx-xx-xx格式的字符串列表
 modlist = xlsadd.modname(listpath, sheetp)
 modpathnamelist = xlsadd.modpathname(listpath, sheetp)
-#print(modlist)
+print(modlist)
 for i in modlist:
     #print(i)
     try:
