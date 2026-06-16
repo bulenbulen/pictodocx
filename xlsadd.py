@@ -4,11 +4,11 @@ from openpyxl import load_workbook as lw
 #modname函数返回最后一个非空值，modpathname函数返回xx-xx-xx-xx格式的字符串列表
 #excel转换成list
 #excel文件路径
-def modname(filepath):
+def modname(filepath,sheetpage):
     modlist = []
-    joinlist = []
+    
     wb = lw(filepath, data_only=False)
-    ws = wb['电脑端（PC端）']
+    ws = wb[sheetpage]
 
     # 先读原始表格值；随后只把真实合并区域的空白格补成顶端单元格的值
     rows = [list(row) for row in ws.iter_rows(values_only=True)]
@@ -40,11 +40,11 @@ def modname(filepath):
     return modlist
 
 
-def modpathname(filepath):
-    modlist = []
+def modpathname(filepath,sheetpage):
+    
     joinlist = []
     wb = lw(filepath, data_only=False)
-    ws = wb['电脑端（PC端）']
+    ws = wb[sheetpage]
 
     # 先读原始表格值；随后只把真实合并区域的空白格补成顶端单元格的值
     rows = [list(row) for row in ws.iter_rows(values_only=True)]

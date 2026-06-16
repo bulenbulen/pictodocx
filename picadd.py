@@ -4,7 +4,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 # -*- coding: utf-8 -*-
 #在第n行写入功能名称，并添加相应的图片n张
-#doc文档路径，图片目录路径，图片名称，指定行数（默认为0代表不指定行直接add到最后）
+#doc文档路径，图片目录路径，图片名称，指定行数（默认为0代表不指定行直接add到最后），modpathnamexx-xx-xx-xx
 def picaddname(docfile,picfile,picname,rownum=0,modpathname=None):
     #docfile = r'D:/DATA/doctest/test.docx'
     #picfile = r'D:/DATA/doctest'
