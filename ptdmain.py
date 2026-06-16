@@ -18,6 +18,6 @@ for i in modlist:
         picadd.picaddname(filepath, picfiles, i)
         print(i)
     except:
-        pass
+        print(i,'没有对应图片')
 
 
