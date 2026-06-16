@@ -8,7 +8,7 @@ from docx.enum.text import WD_ALIGN_PARAGRAPH
 def picaddname(docfile,picfile,picname,rownum=0,modpathname=None):
     #docfile = r'D:/DATA/doctest/test.docx'
     #picfile = r'D:/DATA/doctest'
-    modpathname = modpathname if modpathname else picfile
+    modpathname = modpathname if modpathname else picname
     #空文档就加第一段落，后续段落就直接修改内容
     doc= Document(docfile)
     if len(doc.paragraphs) == 0:
