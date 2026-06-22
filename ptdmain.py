@@ -16,7 +16,7 @@ for i in modlist:
         #modpathnamelist对应modlist的最后一个非空值，作为图片标题；也可直接用modlist的值作为图片标题
         j=modpathnamelist[modlist.index(i)]
         #picaddname(docfile,picfile,picname,rownum=n,modpathname=j)可选
-        picadd.picaddname(filepath, picfiles, i, rownum=0, modpathname=None  )
+        picadd.picaddname(filepath, picfiles, i, rownum=0, modpathname=j  )
         print(i)
     except:
         pass
