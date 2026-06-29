@@ -1,5 +1,5 @@
 from docx import Document
-from docx.shared import Inches
+from docx.shared import Inches,Cm
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 
 # -*- coding: utf-8 -*-
@@ -27,7 +27,7 @@ def picaddname(docfile,picfile,picname,rownum=0,modpathname=None):
         #图片
         picf_para = doc.add_paragraph()
         picf_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        picf_para.add_run().add_picture(rf'{picfile}/{picname}.png')
+        picf_para.add_run().add_picture(rf'{picfile}/{picname}.png', width=Cm(17.0))
 
         current_para = picf_para
         for i in range(2, 10):
@@ -35,7 +35,7 @@ def picaddname(docfile,picfile,picname,rownum=0,modpathname=None):
             try:
                 new_para = doc.add_paragraph()
                 new_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                new_para.add_run().add_picture(img_path)
+                new_para.add_run().add_picture(img_path, width=Cm(17.0))
                 current_para._element.addnext(new_para._element)
                 current_para = new_para
             except Exception:
@@ -58,7 +58,7 @@ def picaddname(docfile,picfile,picname,rownum=0,modpathname=None):
         # 先插入第一张图片
         img_para = doc.add_paragraph()
         img_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        img_para.add_run().add_picture(rf'{picfile}/{picname}.png')
+        img_para.add_run().add_picture(rf'{picfile}/{picname}.png', width=Cm(17.0))
         title_para._element.addnext(img_para._element)
 
         current_para = img_para
@@ -69,7 +69,7 @@ def picaddname(docfile,picfile,picname,rownum=0,modpathname=None):
             try:
                 new_para = doc.add_paragraph()
                 new_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                new_para.add_run().add_picture(img_path)
+                new_para.add_run().add_picture(img_path, width=Cm(17.0))
                 current_para._element.addnext(new_para._element)
                 current_para = new_para
             except Exception:

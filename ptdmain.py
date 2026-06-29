@@ -5,7 +5,7 @@ import xlsadd
 sheetp = '电脑端（PC端）'
 filepath = r'C:/Users/LENOVO/Desktop/jt/test.docx'
 listpath= r'C:/Users/LENOVO/Desktop/jt/功能模块清单.xlsx'
-picfiles = r'C:/Users/LENOVO/Desktop/jt'
+picfiles = r'C:/Users/LENOVO/Desktop/jt/all'
 #modname函数返回最后一个非空值，modpathname函数返回xx-xx-xx-xx格式的字符串列表
 modlist = xlsadd.modname(listpath, sheetp)
 modpathnamelist = xlsadd.modpathname(listpath, sheetp)
